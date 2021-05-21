@@ -46,6 +46,9 @@ def mainFunction():
         else:
             ip_in_binary.append(ip_binary_oct[i])
 
+    ip_bin = f'{ip_in_binary[0]}.{ip_in_binary[1]}.{ip_in_binary[2]}.{ip_in_binary[3]}'
+    subnet_mask = f'{binary_mask[:8]}.{binary_mask[8:16]}.{binary_mask[16:24]}.{binary_mask[24:]}'
+
     # DECIMAL FORM OF SUBNET MASK
 
     decimal_mask = f'{int(binary_mask[:8],2)}.{int(binary_mask[8:16],2)}.{int(binary_mask[16:24],2)}.{int(binary_mask[24:],2)}'
@@ -105,9 +108,9 @@ def mainFunction():
     # OUTPUT AREA
 
     print(f'\n\033[1;31m > Your Network ID is:\033[m {network_id}')
-    print(f'\n\033[1;31m > Binary form of the IP address:\033[m {ip_in_binary[0]}.{ip_in_binary[1]}.{ip_in_binary[2]}.{ip_in_binary[3]}')
+    print(f'\n\033[1;31m > Binary form of the IP address:\033[m {ip_bin}')
     print(f'\n\033[1;31m > Decimal form of the subnet mask:\033[m {decimal_mask}')
-    print(f'\n\033[1;31m > The subnet mask:\033[m {binary_mask[:8]}.{binary_mask[8:16]}.{binary_mask[16:24]}.{binary_mask[24:]}')
+    print(f'\n\033[1;31m > The subnet mask:\033[m {subnet_mask}')
     print(f'\n\033[1;31m > The range of the network:\033[m {first_ip} - {last_ip}')
     print(f'\n\033[1;31m > The number of hosts available:\033[m {num_of_hosts} ({num_of_hosts+2} IP\'s in total)')
     print(f'\n\033[1;31m > Your IP is a class:\033[m {ip_class}')
