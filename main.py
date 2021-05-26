@@ -129,4 +129,4 @@ while follow == 'y':
         print('Something went wrong, the project will be closed.')
         break
 
-print('\n\033[1;32m * Thank you for testing our program *\n')
+print('\n\033[1;32m * Thank you for testing our program *\n\033[m')
