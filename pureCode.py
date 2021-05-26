@@ -119,9 +119,9 @@ def mainFunction():
     print(f' > Your broadcast address is: {broadcast_id}')
 
 follow = 'y'
-while follow == 'y':
+while follow[0] == 'y':
     mainFunction()
-    follow = input('Do you want to continue calculating?[y/n]: ')
+    follow = input('Do you want to continue calculating?[y/n]: ').strip()
     if follow[0].lower() == 'y':
         continue
     elif follow[0].lower() == 'n':
@@ -130,4 +130,4 @@ while follow == 'y':
         print('Something went wrong, the project will be closed.')
         break
 
-print(' * Thank you for testing our program *')
+print('* Thank you for testing our program *')
