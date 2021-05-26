@@ -118,9 +118,9 @@ def mainFunction():
     print(f'\n\033[1;31m > Your broadcast address is:\033[m {broadcast_id}')
 
 follow = 'y'
-while follow == 'y':
+while follow[0] == 'y':
     mainFunction()
-    follow = input('\n\033[1;34mDo you want to continue calculating?[y/n]:\033[m ')
+    follow = input('\n\033[1;34mDo you want to continue calculating?[y/n]:\033[m ').strip()
     if follow[0].lower() == 'y':
         continue
     elif follow[0].lower() == 'n':
