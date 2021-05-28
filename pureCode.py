@@ -20,7 +20,7 @@ def mainFunction():
 
     while True:
         try:
-            input_mask = input('- Insert here the Subnet Mask: /').replace(' ','').replace('/','')
+            input_mask = input('- Insert here the Subnet Mask: /').strip().replace('/','')
             if int(input_mask)>=0 and int(input_mask)<= 32:
                 break
             elif int(input_mask) > 32:
