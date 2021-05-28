@@ -3,7 +3,7 @@ def mainFunction():
 
     while True:
         try:
-            input_ip =input('- Insert here the \033[1;31mIP Address\033[m: ')
+            input_ip =input('- Insert here the \033[1;31mIP Address\033[m: ').strip()
             octet_in_list = input_ip.split('.')
             int_octet_in_list = [int(i)for i in octet_in_list]
             if (len(int_octet_in_list)==4) and \
