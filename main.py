@@ -21,7 +21,7 @@ def mainFunction():
 
     while True:
         try:
-            input_mask = input('- Insert here the \033[1;32mSubnet Mask\033[m: /').replace(' ','').replace('/','')
+            input_mask = input('- Insert here the \033[1;32mSubnet Mask\033[m: /').strip().replace('/','')
             if int(input_mask)>=0 and int(input_mask)<= 32:
                 break
             elif int(input_mask) > 32:
@@ -41,8 +41,8 @@ def mainFunction():
 
     for i in range(0,len(ip_binary_oct)):
         if len(ip_binary_oct[i]) < 8:
-            formated_binary = ip_binary_oct[i].zfill(8)
-            ip_in_binary.append(formated_binary)
+            formatted_binary = ip_binary_oct[i].zfill(8)
+            ip_in_binary.append(formatted_binary)
         else:
             ip_in_binary.append(ip_binary_oct[i])
 
@@ -129,4 +129,4 @@ while follow[0] == 'y':
         print('Something went wrong, the project will be closed.')
         break
 
-print('\n\033[1;32m * Thank you for testing our program *\n\033[m')
+print('\n\033[1;32m* Thank you for testing our program *\n\033[m')
