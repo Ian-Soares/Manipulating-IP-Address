@@ -2,7 +2,7 @@ def mainFunction():
 
     while True:
         try:
-            input_ip =input('- Insert here the IP Address: ')
+            input_ip =input('- Insert here the IP Address: ').strip()
             octet_in_list = input_ip.split('.')
             int_octet_in_list = [int(i)for i in octet_in_list]
             if (len(int_octet_in_list)==4) and \
@@ -103,7 +103,7 @@ def mainFunction():
 follow = 'y'
 while follow[0] == 'y':
     mainFunction()
-    follow = input('Do you want to continue calculating?[y/n]: ')
+    follow = input('Do you want to continue calculating?[y/n]: ').strip()
     if follow[0].lower() == 'y':
         continue
     elif follow[0].lower() == 'n':
